@@ -1,5 +1,10 @@
+import { resolve } from 'path';
+import fs from 'fs';
+
+const path = resolve('src', 'fs', 'files', 'fileToRead.txt');
+
 const read = async () => {
-    // Write your code here 
+    fs.createReadStream(path).pipe(process.stdout)
 };
 
 await read();
